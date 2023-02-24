@@ -1,0 +1,79 @@
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 8 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 1 -nworst 1 -delay_type max -sort_by slack.
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.2 (lin64) Build 2258646 Thu Jun 14 20:02:38 MDT 2018
+| Date         : Fri Feb 24 20:03:44 2023
+| Host         : nanodcserver running 64-bit CentOS Linux release 7.4.1708 (Core)
+| Command      : report_timing
+| Design       : top_mealy
+| Device       : 7a35t-cpg236
+| Speed File   : -1  PRODUCTION 1.22 2018-03-21
+------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack:                    inf
+  Source:                 i_reg[3]/C
+                            (rising edge-triggered cell FDCE)
+  Destination:            i_reg[29]/D
+  Path Group:             (none)
+  Path Type:              Max at Slow Process Corner
+  Data Path Delay:        6.305ns  (logic 3.543ns (56.194%)  route 2.762ns (43.806%))
+  Logic Levels:           16  (CARRY4=13 FDCE=1 LUT2=2)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X0Y0           FDCE                         0.000     0.000 r  i_reg[3]/C
+    SLICE_X0Y0           FDCE (Prop_fdce_C_Q)         0.456     0.456 f  i_reg[3]/Q
+                         net (fo=4, routed)           0.960     1.416    i_reg[3]
+    SLICE_X1Y2           LUT2 (Prop_lut2_I1_O)        0.124     1.540 r  y[1]_i_37/O
+                         net (fo=1, routed)           0.000     1.540    y[1]_i_37_n_0
+    SLICE_X1Y2           CARRY4 (Prop_carry4_S[1]_CO[3])
+                                                      0.550     2.090 r  y_reg[1]_i_23/CO[3]
+                         net (fo=1, routed)           0.000     2.090    y_reg[1]_i_23_n_0
+    SLICE_X1Y3           CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.204 r  y_reg[1]_i_14/CO[3]
+                         net (fo=1, routed)           0.000     2.204    y_reg[1]_i_14_n_0
+    SLICE_X1Y4           CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.318 r  y_reg[1]_i_5/CO[3]
+                         net (fo=1, routed)           0.000     2.318    y_reg[1]_i_5_n_0
+    SLICE_X1Y5           CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     2.432 r  y_reg[1]_i_4/CO[3]
+                         net (fo=1, routed)           0.000     2.432    load
+    SLICE_X1Y6           CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.222     2.654 r  y_reg[1]_i_3/O[0]
+                         net (fo=36, routed)          1.802     4.456    y_reg[1]_i_3_n_7
+    SLICE_X0Y0           LUT2 (Prop_lut2_I1_O)        0.299     4.755 r  i[0]_i_6/O
+                         net (fo=1, routed)           0.000     4.755    i[0]_i_6_n_0
+    SLICE_X0Y0           CARRY4 (Prop_carry4_S[0]_CO[3])
+                                                      0.532     5.287 r  i_reg[0]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     5.287    i_reg[0]_i_1_n_0
+    SLICE_X0Y1           CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.401 r  i_reg[4]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     5.401    i_reg[4]_i_1_n_0
+    SLICE_X0Y2           CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.515 r  i_reg[8]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     5.515    i_reg[8]_i_1_n_0
+    SLICE_X0Y3           CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.629 r  i_reg[12]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     5.629    i_reg[12]_i_1_n_0
+    SLICE_X0Y4           CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.743 r  i_reg[16]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     5.743    i_reg[16]_i_1_n_0
+    SLICE_X0Y5           CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.857 r  i_reg[20]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     5.857    i_reg[20]_i_1_n_0
+    SLICE_X0Y6           CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.114     5.971 r  i_reg[24]_i_1/CO[3]
+                         net (fo=1, routed)           0.000     5.971    i_reg[24]_i_1_n_0
+    SLICE_X0Y7           CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.334     6.305 r  i_reg[28]_i_1/O[1]
+                         net (fo=1, routed)           0.000     6.305    i_reg[28]_i_1_n_6
+    SLICE_X0Y7           FDCE                                         r  i_reg[29]/D
+  -------------------------------------------------------------------    -------------------
+
+
+
+
