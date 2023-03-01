@@ -2,7 +2,7 @@ open_project [pwd]/Assignment/Assignment.xpr
 set_property source_mgmt_mode None [current_project]
 update_compile_order -fileset sources_1	
 
-set_property top [string trimright [lindex $argv 0] ".v"] [current_fileset]
+set_property top [string trimright [lindex $argv 0] ""] [current_fileset]
 set_property source_mgmt_mode None [current_project]
 update_compile_order -fileset sources_1
 
@@ -20,8 +20,8 @@ while {$x !=1 } {
 	else { set x 1 }
 }
 
-report_power > Impl/[string trimright [lindex $argv 0] ".v"]/power.txt
-report_timing > Impl/[string trimright [lindex $argv 0] ".v"]/timing.txt
-report_utilization > Impl/[string trimright [lindex $argv 0] ".v"]/utilization.txt
+report_power > Impl/[string trimright [lindex $argv 0] ""]/power.txt
+report_timing > Impl/[string trimright [lindex $argv 0] ""]/timing.txt
+report_utilization > Impl/[string trimright [lindex $argv 0] ""]/utilization.txt
 
 close_project
